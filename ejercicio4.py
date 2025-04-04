@@ -12,6 +12,9 @@ def contar_consonantes(palabra):
             contador += 1
     return contador
 
+def nada():
+    pass
+
 if __name__ == '__main__':
     oracion = 'La seguridad es una competencia'
     print(f'Cantidad de vocales: {contar_vocales(oracion)}')
