@@ -16,7 +16,8 @@ def nada():
     pass
 
 if __name__ == '__main__':
-    oracion = 'La seguridad es una competencia'
-    print(f'Cantidad de vocales: {contar_vocales(oracion)}')
-    print(f'Cantidad de consonantes: {contar_consonantes(oracion)}')
+    texto = 'La seguridad es una competencia'
+    print(texto)
+    print(f'Cantidad de vocales: {contar_vocales(texto)}')
+    print(f'Cantidad de consonantes: {contar_consonantes(texto)}')
 
