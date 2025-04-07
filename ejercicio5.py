@@ -19,7 +19,11 @@ def desplegar_menu():
                 print(f'El resultado de la potencia es: {resultado}\n')
 
             elif opcion == '2':
-                pass
+                
+                print('\nIngrese el numero')
+                numero = ingresar_numero_entero()
+                digitos = contar_digitos(numero)
+                print(f'El numero {numero} tiene {digitos} digitos\n')
 
             elif opcion == '4':
                 break
