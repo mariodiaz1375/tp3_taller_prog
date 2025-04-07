@@ -10,7 +10,7 @@ def desplegar_menu():
             opcion = input('Ingrese una opcion: ')
 
             if opcion == '1':
-
+            
                 print('\nIngrese la base')
                 base = ingresar_numero()
                 print('Ingrese el exponente')
@@ -20,10 +20,17 @@ def desplegar_menu():
 
             elif opcion == '2':
                 
-                print('\nIngrese el numero')
+                print('\nContar digitos')
                 numero = ingresar_numero_entero()
                 digitos = contar_digitos(numero)
                 print(f'El numero {numero} tiene {digitos} digitos\n')
+
+            elif opcion == '3':
+                
+                print('\nNumero capicua')
+                numero = ingresar_numero_entero()
+                capicua = det_capicua(numero)
+                print(f'El numero {numero} es capicua? {capicua}\n')
 
             elif opcion == '4':
                 break
@@ -43,7 +50,7 @@ def contar_digitos(num):
 
 def det_capicua(num):
     num = str(num)
-    if num == num.reverse():
+    if num == num[::-1]:
         return True
     else:
         return False
@@ -52,6 +59,7 @@ def det_capicua(num):
 if __name__ == '__main__':
     print('Ejercicio 5')
     desplegar_menu()
+    
 
 
 
