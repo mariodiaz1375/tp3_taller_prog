@@ -1,7 +1,2 @@
 probando en development
 otra linea desde development
-<<<<<<< HEAD
-agregamos nueva linea en dev
-=======
-otra linea para probar
->>>>>>> development
