@@ -97,10 +97,10 @@ if __name__ == '__main__':
     for fila in matriz2:
         print(fila)
     
-    # # print('\nResultado de la suma de a + b')   
-    # # resultado = sumar_matrices(matriz1,matriz2)
-    # # for fila in resultado:
-    # #     print(fila)
+    # print('\nResultado de la suma de a + b')   
+    # resultado = sumar_matrices(matriz1,matriz2)
+    # for fila in resultado:
+    #     print(fila)
 
     print('producto')
     print(crear_matriz_producto(matriz1, matriz2))
