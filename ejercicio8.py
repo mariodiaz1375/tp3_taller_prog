@@ -33,12 +33,21 @@ def desplegar_menu():
                 else:
                     print('Producto no agregado, intentelo de nuevo')
 
-            # elif opcion == '2':
-                
-            #     print('\nContar digitos')
-            #     numero = ingresar_numero_entero()
-            #     digitos = contar_digitos(numero)
-            #     print(f'El numero {numero} tiene {digitos} digitos\n')
+            elif opcion == '2':
+
+                prov = input('Ingrese el proveedor: ')
+                print(f'Productos del proveedor {prov}: ')
+                for registro in matriz:
+                    if registro[1] == prov:
+                        print(registro[0])
+
+            elif opcion == '3':
+
+                print('Producto mas barato: ')
+                for registro in matriz:
+                    
+                    if registro[1] == prov:
+                        print(registro[0])
 
             elif opcion == '5':
                 

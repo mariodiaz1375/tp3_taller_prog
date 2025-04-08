@@ -4,7 +4,7 @@ import random
 def crear_vector_entero(cantidad):
     lista = []
     for i in range(cantidad):
-        lista.append(random.randint(0,9))
+        lista.append(random.randint(-9,9))
     return lista 
 
 def crear_vector_real(cantidad):
@@ -14,6 +14,12 @@ def crear_vector_real(cantidad):
         numero = round(numero, random.randint(0,5))
         lista.append(numero)
     return lista
+
+def crear_vector_natural(cantidad):
+    lista = []
+    for i in range(cantidad):
+        lista.append(random.randint(0,9))
+    return lista 
 
 
 if __name__ == '__main__':

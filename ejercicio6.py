@@ -8,21 +8,6 @@ def comprobar_producto(a, b):
         return True
     else:
         return False
-
-def crear_matriz_producto(a, b):
-    matriz_p = []
-    for i in range(len[a]):
-        for j in range(len(b[0])):
-            matriz_p[i][j] = 0
-
-def columna_a_lista(matriz):
-    columnas = []
-    for i in range(len(matriz[0])):
-        columna = []
-        for lista in matriz:
-            columna.append(lista[i])
-        columnas.append(columna)
-    return columnas
         
 def crear_matriz_producto(a, b):
     matriz_p = crear_matriz(len(a), len(b[0]))
@@ -39,17 +24,21 @@ def sumar_matrices(a, b):
     return matriz
 
 def multiplicar_matrices(a, b):
-    matriz_p = crear_matriz_producto(a,b)
-    for i in range(len(a)):
-        for j in range(len(b[0])):
-            for k in range(len(b)):
-                matriz_p[i][j] += a[i][k] * b[k][j]
-    return matriz_p
+    if comprobar_producto(a,b):
+        matriz_p = crear_matriz_producto(a,b)
+        for i in range(len(a)):
+            for j in range(len(b[0])):
+                for k in range(len(b)):
+                    matriz_p[i][j] += a[i][k] * b[k][j]
+        return matriz_p
+    else:
+        print('Las matrices no cumplen las condiciones para multiplicarse')
+        return []
 
 if __name__ == '__main__':
 
     matriz1 = crear_matriz(2,3)
-    matriz2 = crear_matriz(3,2)
+    matriz2 = crear_matriz(3,3)
     print('\nMatriz 1: ')
     for fila in matriz1:
         print(fila)
@@ -63,13 +52,7 @@ if __name__ == '__main__':
     # for fila in resultado:
     #     print(fila)
 
-    print('producto')
-    print(crear_matriz_producto(matriz1, matriz2))
-    print('resultado: ')
+    print('\nResultado de la multiplicacion de matrices: ')
     matriz_p = multiplicar_matrices(matriz1, matriz2)
     for fila in matriz_p:
         print(fila)
-
-    columnas = columna_a_lista(matriz2)
-    for columna in columnas:
-        print(columna)
