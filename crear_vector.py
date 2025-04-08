@@ -4,7 +4,7 @@ import random
 def crear_vector_entero(cantidad):
     lista = []
     for i in range(cantidad):
-        lista.append(random.randint(1,20))
+        lista.append(random.randint(-10,10))
     return lista 
 
 def crear_vector_real(cantidad):
