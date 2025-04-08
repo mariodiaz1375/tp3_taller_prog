@@ -47,12 +47,6 @@ def comprobar_producto(a, b):
         return True
     else:
         return False
-
-def crear_matriz_producto(a, b):
-    matriz_p = []
-    for i in range(len[a]):
-        for j in range(len(b[0])):
-            matriz_p[i][j] = 0
         
 def crear_matriz_producto(a, b):
     matriz_p = crear_matriz(len(a), len(b[0]))
