@@ -12,12 +12,36 @@ def crear_registro():
         print(f'Ocurrio un error: {e}')
         return registro
     
+def mostrar_por_prov(matriz):
+    prov = input('\nIngrese el proveedor: ')
+    print(f'Productos del proveedor {prov}: ')
+    for registro in matriz:
+        if registro[1] == prov:
+            print(registro[0])
+
+def mostrar_mas_barato(matriz):
+    print('\nProducto mas barato: ')
+    precio = float(matriz[0][2])
+    for registro in matriz:
+        if float(registro[2]) < precio:
+            precio = float(registro[2])
+    for registro in matriz:
+        if float(registro[2]) == precio:
+            print(registro)
+    
+def mostrar_existente(matriz):
+    print('\nProductos con existencias: ')
+    for registro in matriz:
+        if float(registro[3]) > 0:
+            print(registro) 
+
+
 def desplegar_menu():
     matriz = []
     try:
         while True:
             print('\n1. Agregar un producto')
-            print('2. Mostrar prpductos por proveedor')
+            print('2. Mostrar productos por proveedor')
             print('3. Mostrar el producto mas barato')
             print('4. Mostrar los productos con existencias')
             print('5. Mostrar todos los productos')
@@ -35,19 +59,15 @@ def desplegar_menu():
 
             elif opcion == '2':
 
-                prov = input('Ingrese el proveedor: ')
-                print(f'Productos del proveedor {prov}: ')
-                for registro in matriz:
-                    if registro[1] == prov:
-                        print(registro[0])
+                mostrar_por_prov(matriz)
 
             elif opcion == '3':
 
-                print('Producto mas barato: ')
-                for registro in matriz:
-                    
-                    if registro[1] == prov:
-                        print(registro[0])
+                mostrar_mas_barato(matriz)
+
+            elif opcion == '4':
+
+                mostrar_existente(matriz)
 
             elif opcion == '5':
                 
